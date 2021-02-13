@@ -21,8 +21,8 @@ async function compress() {
     const pth = file[0].destinationPath.toString().replace(/\\/g, "/");
     const buff = file[0].data;
 
-    // // Save as txt in Buffer format
-    // fs.writeFile("compressed_buffer.txt", buff, () => {});
+    // Save as txt in Buffer format
+    //fs.writeFile("compressed_buffer.txt", buff, () => {});
 
     fs.readFile(pth, { encoding: "base64" }, (err, data) => {
       if (err) throw err;
