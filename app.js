@@ -4,9 +4,7 @@ const imageminPngquant = require("imagemin-pngquant");
 const fs = require("fs");
 
 async function compress() {
-
   try {
-
     const file = await imagemin(["images/*.{jpg,png}"], {
       destination: "compressed/",
       plugins: [
@@ -16,7 +14,6 @@ async function compress() {
         }),
       ],
     });
-
 
     const pth = file[0].destinationPath.toString().replace(/\\/g, "/");
     const buff = file[0].data;
